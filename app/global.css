@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+/* Common Css */
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply bg-primary text-white min-h-screen font-darker overflow-x-hidden;
+  }
+}
+
+/* Accordion */
+
+svg {
+  margin-top: 26px !important;
+}
+.data-\[open\=true\]\:-rotate-90[data-open="true"] {
+  --tw-rotate: 0deg !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.bg-divider {
+  --tw-bg-opacity: 1;
+  height: 1px;
+  width: 698px;
+  background-color: #d9dbe9 !important;
+  margin-top: 36px !important;
+}
+
+/* Custom Design for Slider(Large Device) */
+
+.slick-dots li button:before {
+  color: white !important;
+}
+.slider {
+  width: 100%;
+  height: 400px;
+  margin: 70px auto;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-slider .slick-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.slide,
+.slide Image {
+  width: 100%;
+  height: 350px;
+}
+.slide {
+  /* opacity: 0.3; */
+  transform: scale(0.72);
+  transition: 0.5s;
+  width: 707px !important;
+  height: 477px;
+  background-image: url("../public/assets/Union4.png") !important;
+  background-position: right !important;
+  width: 707px !important;
+  position: relative;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+  color: white !important;
+  background: #2d2d2d;
+  z-index: -1;
+}
+.slide .name {
+  color: white;
+}
+.slide .head {
+  color: white;
+}
+.slide::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    -90deg,
+    rgba(27, 28, 30, 0.37) 0%,
+    rgba(27, 28, 30, 0.8) 28.98%
+  );
+}
+.slick-dots {
+  bottom: -100px !important;
+}
+.slick-dots li button {
+  width: 30px !important;
+  height: 30px !important;
+}
+.slide-active {
+  transform: scale(0.85);
+  background-image: url("../public/assets/Union3.png");
+  background-position: right;
+  width: 707px !important;
+  height: 477px;
+  background-color: white;
+  color: #2d2d2d;
+  margin: 0 auto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+  z-index: 10;
+}
+/* This is for Youtube */
+.youtube {
+  border-radius: 20px;
+}
+
+.hero_youtube {
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+/* Media Query for Slider and Accordion */
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+  /* Accordion (Small Device) */
+  svg {
+    margin-top: 0 !important;
+  }
+  svg.format {
+    /* margin-top: 25px !important; */
+    height: 12px;
+    width: 12px;
+    display: none;
+  }
+  .bg-divider {
+    --tw-bg-opacity: 1;
+    height: 1px;
+    width: auto;
+    background-color: #d9dbe9 !important;
+    margin-top: 14px !important;
+  }
+  .data-\[open\=true\]\:-rotate-90[data-open="true"] {
+    display: none;
+  }
+  /* Slider */
+  .slick-dots {
+    bottom: -30px !important;
+  }
+  .slick-dots li button:before {
+    color: white !important;
+  }
+  .slider {
+    width: auto;
+    height: auto;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slick-slider .slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-slide {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .slide,
+  .slide Image {
+    width: 100%;
+    height: 350px;
+  }
+  .slide {
+    /* opacity: 0.3; */
+    transform: scale(0.72);
+    transition: 0.5s;
+    width: 230px !important;
+    height: auto;
+    background-image: url("../public/assets/Union4.png") !important;
+    position: relative;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 150% */
+    color: white;
+    background: #2d2d2d;
+    z-index: -1;
+  }
+  .slide::after {
+    /* opacity: 0.3; */
+    content: "";
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      -90deg,
+      rgba(27, 28, 30, 0.37) 0%,
+      rgba(27, 28, 30, 0.8) 28.98%
+    );
+  }
+  .slide-active {
+    transform: scale(0.85);
+    background-image: url("../public/assets/Union3.png");
+    width: 230px !important;
+    height: auto;
+    background-color: white;
+    color: #2d2d2d;
+    margin: 0 auto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 150% */
+    z-index: 10;
+  }
+  /* Slider */
+  
+  /* @layer utilities {
+    .styleMargin {
+      margin-top: -25px !important;
+    }
+  } */
+}
+
+body {
+  overflow-x: hidden !important;
+} /* Hide scrollbars */
